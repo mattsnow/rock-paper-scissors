@@ -79,14 +79,10 @@ function tallyScore(game_result_str) {
 function playGame() {
     let game_result
 
-    let numOfRounds = prompt("How many rounds would you like to play?", 5);
-
-    for (let i = 1; i <= numOfRounds; i++) {
-        console.log(`Round ${i}: `)
-        game_result = playRound(userInput(), computerPlay());
-        tallyScore(game_result.slice(0, 5))
-        console.log(game_result)
-        console.log("Computer: " + computerScore + " Human: " + humanScore)
-        console.log("\n")
-    }
+    console.log(`Round 1: `)
+    game_result = playRound(userInput(), computerPlay());
+    tallyScore(game_result.slice(0, 5))
+    console.log(game_result)
+    console.log("Computer: " + computerScore + " Human: " + humanScore)
+    console.log("\n")
 }
