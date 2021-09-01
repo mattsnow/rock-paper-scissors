@@ -2,15 +2,92 @@
 <html>
 
 <head>
-    <title>Page Title</title>
-    <meta charset="UTF-8" />
-    
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8" />
+
 </head>
 
 <body>
-    <div id="container"></div>
+
+  <style>
+    .item1 {
+      grid-area: play;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+    }
+
+    .item2 {
+      grid-area: controls;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .item3 {
+      grid-area: rock;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .item4 {
+      grid-area: paper;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .item5 {
+      grid-area: scissors;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .button {
+      font-size: 100%;
+      padding: 15px;
+    }
+
+    .container {
+      font-size: 40px;
+      min-height: 500px;
+      width: 100%;
+      background: rgb(206, 213, 245);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      grid-template-areas:
+        "play play play"
+        "l controls r"
+        "rock paper scissors";
+    }
+  </style>
+
+  <div class="container" id="container">
+
+    <div class="item1">
+      <p id="text1">Choose your selection to begin</p>
+      <p id="text2">There are 5 rounds</p>
+    </div>
+
+    <div class="item2">
+      <button type="button" class="button" id="reset">Reset</button>
+    </div>
+
+    <div class="item3">
+      <button type="button" class="button" id="rock">Rock</button>
+    </div>
+
+    <div class="item4">
+      <button type="button" class="button" id="paper">Paper</button>
+    </div>
+
+    <div class="item5">
+      <button type="button" class="button" id="scissors">Scissors</button>
+    </div>
+  </div>
+
 </body>
 
 </html>
 
-<script src="scripts.js"></script> 
+<script src="scripts.js"></script>
